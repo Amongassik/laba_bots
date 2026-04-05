@@ -8,7 +8,7 @@ main = ReplyKeyboardMarkup(
     input_field_placeholder='Выбиерете то что вас интересует',
     one_time_keyboard=True,
     keyboard=[
-    [KeyboardButton(text='Курс валют'),KeyboardButton(text='Лаба 11')],]
+    [KeyboardButton(text='Курс валют'),KeyboardButton(text='CASE-система')],]
 )
 
 action_one = InlineKeyboardMarkup(
@@ -19,10 +19,7 @@ action_one = InlineKeyboardMarkup(
 )
 
 async def currencies():
-    """
-    Генерация клавиатуры для выбора валют
-        должен получать не в параметрах а внутри себя список валют и создавать кнопки
-    """
+    """Генерация клавиатуры для выбора валют"""
     keyboard = InlineKeyboardBuilder()
 
     data = load_currencies()
@@ -57,4 +54,25 @@ async def currencies():
         InlineKeyboardButton(text="Закрыть", callback_data="close_keyboard")
     )
     return keyboard.as_markup()
+
+async def to_case(Stage:int):
+    """
+    Генерация кнопок функций
         
+    Args:
+        Stage:Этап выбора функций(0,1,2)(f1,f2,f3)
+    """
+    keyboard = InlineKeyboardBuilder()
+    cases = ["√x","1/x","e^x"]
+    for id,item in enumerate(cases):
+        keyboard.add(
+            InlineKeyboardButton(
+                text=item,
+                callback_data=f"func_{Stage}_{cases[id]}"
+            )
+        )
+    keyboard.adjust(3)
+    keyboard.row(
+        InlineKeyboardButton(text="Закрыть", callback_data="close_keyboard")
+    )
+    return keyboard.as_markup()
