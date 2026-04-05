@@ -20,7 +20,7 @@ def parse_currency_rates():
         containers = soup.find_all('a',class_='indicators-bar-item')
         data = []
 
-        for idx,item in enumerate(containers,1):
+        for idx,item in enumerate(containers):
             name = item.find('span',class_='indicators-bar-name').get_text(strip=True)
 
             rate = item.find('span',class_='indicators-bar-sum').get_text(strip=True)
@@ -43,6 +43,18 @@ def save_json(data):
             json.dump(data, file, ensure_ascii=False, indent=4)
     except:
         pass
+
+def load_currencies()->list[dict]:
+    """Получаем данные"""
+    try:
+        with open(MASTER_JSON_PATH,'r',encoding='utf-8') as file:
+            data = json.load(file)
+        return data
+    except:
+        return []
+
+def get_lenght():
+    return len(load_currencies())
 
 def parse():
     currencies = parse_currency_rates()
