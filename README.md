@@ -40,7 +40,7 @@ project/
 ### 1. Клонирование проекта
 
 ```bash
-git clone <url-вашего-репозитория>
+git clone https://github.com/Amongassik/laba_bots
 cd project
 ```
 2. Создание виртуального окружения
