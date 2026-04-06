@@ -65,7 +65,7 @@ pip install -r requirements.txt
 
 ```python
 TOKEN = "ВАШ_ТОКЕН_БОТА"
-PROXY_URL = "socks5://ваш_прокси:порт"   # Если прокси не нужен, оставьте пустую строку(Прикси модно взять с репозитория [)](https://github.com/databay-labs/free-proxy-list/blob/master/socks5.txt)
+PROXY_URL = "socks5://ваш_прокси:порт"   # Если прокси не нужен, оставьте пустую строку(Прикси можно взять с репозитория [)](https://github.com/databay-labs/free-proxy-list/blob/master/socks5.txt)
 ```
 5. Запуск бота
 ```python
