@@ -11,7 +11,7 @@
 
 ## 📁 Структура проекта
 ```text
-project/
+laba_bots/
 ├── bot.py # Точка входа, запуск бота
 ├── config.py # Файл конфигурации (токен, прокси)
 ├── requirements.txt # Зависимости проекта
@@ -41,7 +41,7 @@ project/
 
 ```bash
 git clone https://github.com/Amongassik/laba_bots
-cd project
+cd laba_bots
 ```
 2. Создание виртуального окружения
 Windows:
@@ -65,7 +65,7 @@ pip install -r requirements.txt
 
 ```python
 TOKEN = "ВАШ_ТОКЕН_БОТА"
-PROXY_URL = "socks5://ваш_прокси:порт"   # Если прокси не нужен, оставьте пустую строку(Прикси модно взять с репозитория [)](https://github.com/databay-labs/free-proxy-list/blob/master/socks5.txt)
+PROXY_URL = "socks5://ваш_прокси:порт"   # Если прокси не нужен, оставьте пустую строку(Прикси можно взять с репозитория [)](https://github.com/databay-labs/free-proxy-list/blob/master/socks5.txt)
 ```
 5. Запуск бота
 ```python
@@ -113,7 +113,7 @@ aiohttp==3.9.3
 ```bash
 # 1. Скачайте проект
 git clone https://github.com/Amongassik/laba_bots
-cd project
+cd laba_bots
 
 # 2. Создайте виртуальное окружение
 python -m venv venv
