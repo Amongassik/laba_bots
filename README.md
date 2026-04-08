@@ -102,10 +102,10 @@ Python 3.9+
 
 📦 Зависимости (requirements.txt)
 ```text
-aiogram==3.4.1
-beautifulsoup4==4.12.3
-requests==2.31.0
-aiohttp==3.9.3
+aiogram==3.26.1
+beautifulsoup4==4.14.3
+requests==2.33.0
+aiohttp==3.10.11
 ```
 
 🧰 Краткая инструкция по запуску 
